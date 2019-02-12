@@ -3930,13 +3930,7 @@ var fluidPlayerClass = {
     },
 
     isControlBarVisible: function() {
-        var player = this;
-
-        if (player.hasControlBar() === false) {
-            return false;
-        }
-
-        var controlBar = document.getElementById(player.videoPlayerId + '_fluid_controls_container');
+        var controlBar = document.getElementById(this.videoPlayerId + '_fluid_controls_container');
         var style = window.getComputedStyle(controlBar, null);
         return !(style.opacity == 0 || style.visibility == 'hidden');
     },
